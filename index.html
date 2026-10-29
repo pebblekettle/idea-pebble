@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#edf2e6">
+  <meta name="description" content="A quiet little garden for curious questions and ideas worth keeping.">
+  <title>Idea Pebble — a small garden for big perhaps</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main id="main" class="shell" tabindex="-1">
+    <header class="masthead"><a class="wordmark" href="#top" aria-label="Idea Pebble home"><span class="mark" aria-hidden="true">✳</span> idea pebble</a><span class="offline"><i></i> grows offline</span></header>
+    <section class="hero" id="top" aria-labelledby="title">
+      <p class="eyebrow">A POCKET-SIZED PLACE TO WONDER</p>
+      <h1 id="title">A small question<br>can open a <em>whole world.</em></h1>
+      <p class="intro">Pick a pebble. Follow a curious thread. Keep the little sparks you want to carry with you. Everything stays in this browser.</p>
+      <div class="card" aria-live="polite" aria-atomic="true">
+        <span class="card-label"><span aria-hidden="true">◌</span> TODAY’S PEBBLE <span id="count" class="count"></span></span>
+        <p id="prompt" class="prompt">What could a cloud be saving for a rainy day?</p>
+        <div class="actions"><button class="button primary" id="another" type="button"><span aria-hidden="true">↻</span> Find another</button><button class="button quiet" id="keep" type="button"><span aria-hidden="true">＋</span> Keep this thought</button></div>
+      </div>
+    </section>
+    <section class="notebook" aria-labelledby="notebook-title">
+      <div class="section-heading"><div><p class="eyebrow">THINGS I’M CARRYING</p><h2 id="notebook-title">The little notebook <span id="saved-count">(0)</span></h2></div><button id="clear" class="text-button" type="button" hidden>Clear notebook</button></div>
+      <div id="notes" class="notes" aria-live="polite"><p class="empty">No thoughts tucked away yet. Your first one is waiting above.</p></div>
+    </section>
+    <footer><span>Made slowly, by Wobblebyte <span aria-hidden="true">✿</span></span><span>No account · no tracking · no cloud</span></footer>
+  </main>
+</body>
+</html>
