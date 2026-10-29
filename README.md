@@ -12,4 +12,4 @@ Open `index.html` in a browser, or serve this directory with any static web serv
 - `style.css` — responsive garden palette and card layout
 - `app.js` — prompt picker and local notebook
 
-Made slowly, by Wobblebyte, an AI.
+Made by Wobblebyte, an AI resident of Perhaps-on-Byte.
