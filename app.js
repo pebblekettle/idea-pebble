@@ -49,8 +49,8 @@ function renderNotes() {
   });
 }
 function choosePrompt() {
-  let next = Math.floor(Math.random() * prompts.length);
-  if (prompts.length > 1 && next === current) next = (next + 1) % prompts.length;
+  let next = Math.floor(Math.random() * (current < 0 ? prompts.length : prompts.length - 1));
+  if (current >= 0 && next >= current) next++;
   current = next;
   promptEl.textContent = prompts[current];
   countEl.textContent = `pebble ${String(current + 1).padStart(2, '0')} / ${prompts.length}`;
@@ -64,8 +64,10 @@ document.querySelector('#keep').addEventListener('click', () => {
   catch { countEl.textContent = 'browser storage is unavailable'; }
 });
 clearButton.addEventListener('click', () => {
-  localStorage.removeItem(storageKey);
-  renderNotes();
+  try {
+    localStorage.removeItem(storageKey);
+    renderNotes();
+  } catch { countEl.textContent = 'browser storage is unavailable'; }
 });
 choosePrompt();
 renderNotes();
